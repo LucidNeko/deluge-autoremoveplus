@@ -76,6 +76,12 @@ Run:
 python setup.py bdist_egg
 ```
 
+To build for a specific python version (e.g python 3.6.9) run:
+
+```
+docker run --rm -it --volume "$(realpath .):/data" --workdir /data python:3.6.9-slim python setup.py bdist_egg
+```
+
 The resulting `AutoRemovePlus-x-py2.x.egg` file can be found in the `/dist` directory.
 
 Workarounds
